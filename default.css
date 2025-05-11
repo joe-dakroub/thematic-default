@@ -1,0 +1,1091 @@
+t/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/color/default.css */
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/color/base.css */
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+:where([class^='wa-palette-'], [class*=' wa-palette-']),
+:where([class^='wa-brand-'], [class*=' wa-brand-']),
+:where(:root),
+:host {
+  /**
+   * Conditional tokens for use in color-mix()
+   * --wa-color-{hue}-lt-N ➡️ 100% if key < N, 0% otherwise
+   * --wa-color-{hue}-gte-N ➡️ 100% if key >= N, 0% otherwise
+   */
+
+  --wa-color-red-lt-50: calc(clamp(0, 50 - var(--wa-color-red-key), 1) * 100%);
+  --wa-color-red-gte-50: calc(100% - var(--wa-color-red-lt-50));
+  --wa-color-red-lt-60: calc(clamp(0, 60 - var(--wa-color-red-key), 1) * 100%);
+  --wa-color-red-gte-60: calc(100% - var(--wa-color-red-lt-60));
+  --wa-color-red-lt-70: calc(clamp(0, 70 - var(--wa-color-red-key), 1) * 100%);
+  --wa-color-red-gte-70: calc(100% - var(--wa-color-red-lt-70));
+
+  --wa-color-orange-lt-50: calc(clamp(0, 50 - var(--wa-color-orange-key), 1) * 100%);
+  --wa-color-orange-gte-50: calc(100% - var(--wa-color-orange-lt-50));
+  --wa-color-orange-lt-60: calc(clamp(0, 60 - var(--wa-color-orange-key), 1) * 100%);
+  --wa-color-orange-gte-60: calc(100% - var(--wa-color-orange-lt-60));
+  --wa-color-orange-lt-70: calc(clamp(0, 70 - var(--wa-color-orange-key), 1) * 100%);
+  --wa-color-orange-gte-70: calc(100% - var(--wa-color-orange-lt-70));
+
+  --wa-color-yellow-lt-50: calc(clamp(0, 50 - var(--wa-color-yellow-key), 1) * 100%);
+  --wa-color-yellow-gte-50: calc(100% - var(--wa-color-yellow-lt-50));
+  --wa-color-yellow-lt-60: calc(clamp(0, 60 - var(--wa-color-yellow-key), 1) * 100%);
+  --wa-color-yellow-gte-60: calc(100% - var(--wa-color-yellow-lt-60));
+  --wa-color-yellow-lt-70: calc(clamp(0, 70 - var(--wa-color-yellow-key), 1) * 100%);
+  --wa-color-yellow-gte-70: calc(100% - var(--wa-color-yellow-lt-70));
+
+  --wa-color-green-lt-50: calc(clamp(0, 50 - var(--wa-color-green-key), 1) * 100%);
+  --wa-color-green-gte-50: calc(100% - var(--wa-color-green-lt-50));
+  --wa-color-green-lt-60: calc(clamp(0, 60 - var(--wa-color-green-key), 1) * 100%);
+  --wa-color-green-gte-60: calc(100% - var(--wa-color-green-lt-60));
+  --wa-color-green-lt-70: calc(clamp(0, 70 - var(--wa-color-green-key), 1) * 100%);
+  --wa-color-green-gte-70: calc(100% - var(--wa-color-green-lt-70));
+
+  --wa-color-cyan-lt-50: calc(clamp(0, 50 - var(--wa-color-cyan-key), 1) * 100%);
+  --wa-color-cyan-gte-50: calc(100% - var(--wa-color-cyan-lt-50));
+  --wa-color-cyan-lt-60: calc(clamp(0, 60 - var(--wa-color-cyan-key), 1) * 100%);
+  --wa-color-cyan-gte-60: calc(100% - var(--wa-color-cyan-lt-60));
+  --wa-color-cyan-lt-70: calc(clamp(0, 70 - var(--wa-color-cyan-key), 1) * 100%);
+  --wa-color-cyan-gte-70: calc(100% - var(--wa-color-cyan-lt-70));
+
+  --wa-color-blue-lt-50: calc(clamp(0, 50 - var(--wa-color-blue-key), 1) * 100%);
+  --wa-color-blue-gte-50: calc(100% - var(--wa-color-blue-lt-50));
+  --wa-color-blue-lt-60: calc(clamp(0, 60 - var(--wa-color-blue-key), 1) * 100%);
+  --wa-color-blue-gte-60: calc(100% - var(--wa-color-blue-lt-60));
+  --wa-color-blue-lt-70: calc(clamp(0, 70 - var(--wa-color-blue-key), 1) * 100%);
+  --wa-color-blue-gte-70: calc(100% - var(--wa-color-blue-lt-70));
+
+  --wa-color-indigo-lt-50: calc(clamp(0, 50 - var(--wa-color-indigo-key), 1) * 100%);
+  --wa-color-indigo-gte-50: calc(100% - var(--wa-color-indigo-lt-50));
+  --wa-color-indigo-lt-60: calc(clamp(0, 60 - var(--wa-color-indigo-key), 1) * 100%);
+  --wa-color-indigo-gte-60: calc(100% - var(--wa-color-indigo-lt-60));
+  --wa-color-indigo-lt-70: calc(clamp(0, 70 - var(--wa-color-indigo-key), 1) * 100%);
+  --wa-color-indigo-gte-70: calc(100% - var(--wa-color-indigo-lt-70));
+
+  --wa-color-purple-lt-50: calc(clamp(0, 50 - var(--wa-color-purple-key), 1) * 100%);
+  --wa-color-purple-gte-50: calc(100% - var(--wa-color-purple-lt-50));
+  --wa-color-purple-lt-60: calc(clamp(0, 60 - var(--wa-color-purple-key), 1) * 100%);
+  --wa-color-purple-gte-60: calc(100% - var(--wa-color-purple-lt-60));
+  --wa-color-purple-lt-70: calc(clamp(0, 70 - var(--wa-color-purple-key), 1) * 100%);
+  --wa-color-purple-gte-70: calc(100% - var(--wa-color-purple-lt-70));
+
+  --wa-color-pink-lt-50: calc(clamp(0, 50 - var(--wa-color-pink-key), 1) * 100%);
+  --wa-color-pink-gte-50: calc(100% - var(--wa-color-pink-lt-50));
+  --wa-color-pink-lt-60: calc(clamp(0, 60 - var(--wa-color-pink-key), 1) * 100%);
+  --wa-color-pink-gte-60: calc(100% - var(--wa-color-pink-lt-60));
+  --wa-color-pink-lt-70: calc(clamp(0, 70 - var(--wa-color-pink-key), 1) * 100%);
+  --wa-color-pink-gte-70: calc(100% - var(--wa-color-pink-lt-70));
+
+  --wa-color-gray-lt-50: calc(clamp(0, 50 - var(--wa-color-gray-key), 1) * 100%);
+  --wa-color-gray-gte-50: calc(100% - var(--wa-color-gray-lt-50));
+  --wa-color-gray-lt-60: calc(clamp(0, 60 - var(--wa-color-gray-key), 1) * 100%);
+  --wa-color-gray-gte-60: calc(100% - var(--wa-color-gray-lt-60));
+  --wa-color-gray-lt-70: calc(clamp(0, 70 - var(--wa-color-gray-key), 1) * 100%);
+  --wa-color-gray-gte-70: calc(100% - var(--wa-color-gray-lt-70));
+
+  /*
+   * Convenience tokens for common tint cutoffs
+   * --wa-color-{hue}-N-max ➡️ var(--color-{hue}) if key <= N, var(--color-{hue}-N) otherwise
+   * --wa-color-{hue}-N-min ➡️ var(--color-{hue}) if key >= N, var(--color-{hue}-N) otherwise
+   */
+
+  --wa-color-red-max-50: color-mix(in oklab, var(--wa-color-red) var(--wa-color-red-lt-50), var(--wa-color-red-50));
+  --wa-color-red-min-50: color-mix(in oklab, var(--wa-color-red) var(--wa-color-red-gte-50), var(--wa-color-red-50));
+  --wa-color-red-max-60: color-mix(in oklab, var(--wa-color-red) var(--wa-color-red-lt-60), var(--wa-color-red-60));
+  --wa-color-red-min-60: color-mix(in oklab, var(--wa-color-red) var(--wa-color-red-gte-60), var(--wa-color-red-60));
+  --wa-color-red-max-70: color-mix(in oklab, var(--wa-color-red) var(--wa-color-red-lt-70), var(--wa-color-red-70));
+  --wa-color-red-min-70: color-mix(in oklab, var(--wa-color-red) var(--wa-color-red-gte-70), var(--wa-color-red-70));
+
+  --wa-color-orange-max-50: color-mix(
+    in oklab,
+    var(--wa-color-orange) var(--wa-color-orange-lt-50),
+    var(--wa-color-orange-50)
+  );
+  --wa-color-orange-min-50: color-mix(
+    in oklab,
+    var(--wa-color-orange) var(--wa-color-orange-gte-50),
+    var(--wa-color-orange-50)
+  );
+  --wa-color-orange-max-60: color-mix(
+    in oklab,
+    var(--wa-color-orange) var(--wa-color-orange-lt-60),
+    var(--wa-color-orange-60)
+  );
+  --wa-color-orange-min-60: color-mix(
+    in oklab,
+    var(--wa-color-orange) var(--wa-color-orange-gte-60),
+    var(--wa-color-orange-60)
+  );
+  --wa-color-orange-max-70: color-mix(
+    in oklab,
+    var(--wa-color-orange) var(--wa-color-orange-lt-70),
+    var(--wa-color-orange-70)
+  );
+  --wa-color-orange-min-70: color-mix(
+    in oklab,
+    var(--wa-color-orange) var(--wa-color-orange-gte-70),
+    var(--wa-color-orange-70)
+  );
+
+  --wa-color-yellow-max-50: color-mix(
+    in oklab,
+    var(--wa-color-yellow) var(--wa-color-yellow-lt-50),
+    var(--wa-color-yellow-50)
+  );
+  --wa-color-yellow-min-50: color-mix(
+    in oklab,
+    var(--wa-color-yellow) var(--wa-color-yellow-gte-50),
+    var(--wa-color-yellow-50)
+  );
+  --wa-color-yellow-max-60: color-mix(
+    in oklab,
+    var(--wa-color-yellow) var(--wa-color-yellow-lt-60),
+    var(--wa-color-yellow-60)
+  );
+  --wa-color-yellow-min-60: color-mix(
+    in oklab,
+    var(--wa-color-yellow) var(--wa-color-yellow-gte-60),
+    var(--wa-color-yellow-60)
+  );
+  --wa-color-yellow-max-70: color-mix(
+    in oklab,
+    var(--wa-color-yellow) var(--wa-color-yellow-lt-70),
+    var(--wa-color-yellow-70)
+  );
+  --wa-color-yellow-min-70: color-mix(
+    in oklab,
+    var(--wa-color-yellow) var(--wa-color-yellow-gte-70),
+    var(--wa-color-yellow-70)
+  );
+
+  --wa-color-green-max-50: color-mix(
+    in oklab,
+    var(--wa-color-green) var(--wa-color-green-lt-50),
+    var(--wa-color-green-50)
+  );
+  --wa-color-green-min-50: color-mix(
+    in oklab,
+    var(--wa-color-green) var(--wa-color-green-gte-50),
+    var(--wa-color-green-50)
+  );
+  --wa-color-green-max-60: color-mix(
+    in oklab,
+    var(--wa-color-green) var(--wa-color-green-lt-60),
+    var(--wa-color-green-60)
+  );
+  --wa-color-green-min-60: color-mix(
+    in oklab,
+    var(--wa-color-green) var(--wa-color-green-gte-60),
+    var(--wa-color-green-60)
+  );
+  --wa-color-green-max-70: color-mix(
+    in oklab,
+    var(--wa-color-green) var(--wa-color-green-lt-70),
+    var(--wa-color-green-70)
+  );
+  --wa-color-green-min-70: color-mix(
+    in oklab,
+    var(--wa-color-green) var(--wa-color-green-gte-70),
+    var(--wa-color-green-70)
+  );
+
+  --wa-color-cyan-max-50: color-mix(in oklab, var(--wa-color-cyan) var(--wa-color-cyan-lt-50), var(--wa-color-cyan-50));
+  --wa-color-cyan-min-50: color-mix(
+    in oklab,
+    var(--wa-color-cyan) var(--wa-color-cyan-gte-50),
+    var(--wa-color-cyan-50)
+  );
+  --wa-color-cyan-max-60: color-mix(in oklab, var(--wa-color-cyan) var(--wa-color-cyan-lt-60), var(--wa-color-cyan-60));
+  --wa-color-cyan-min-60: color-mix(
+    in oklab,
+    var(--wa-color-cyan) var(--wa-color-cyan-gte-60),
+    var(--wa-color-cyan-60)
+  );
+  --wa-color-cyan-max-70: color-mix(in oklab, var(--wa-color-cyan) var(--wa-color-cyan-lt-70), var(--wa-color-cyan-70));
+  --wa-color-cyan-min-70: color-mix(
+    in oklab,
+    var(--wa-color-cyan) var(--wa-color-cyan-gte-70),
+    var(--wa-color-cyan-70)
+  );
+
+  --wa-color-blue-max-50: color-mix(in oklab, var(--wa-color-blue) var(--wa-color-blue-lt-50), var(--wa-color-blue-50));
+  --wa-color-blue-min-50: color-mix(
+    in oklab,
+    var(--wa-color-blue) var(--wa-color-blue-gte-50),
+    var(--wa-color-blue-50)
+  );
+  --wa-color-blue-max-60: color-mix(in oklab, var(--wa-color-blue) var(--wa-color-blue-lt-60), var(--wa-color-blue-60));
+  --wa-color-blue-min-60: color-mix(
+    in oklab,
+    var(--wa-color-blue) var(--wa-color-blue-gte-60),
+    var(--wa-color-blue-60)
+  );
+  --wa-color-blue-max-70: color-mix(in oklab, var(--wa-color-blue) var(--wa-color-blue-lt-70), var(--wa-color-blue-70));
+  --wa-color-blue-min-70: color-mix(
+    in oklab,
+    var(--wa-color-blue) var(--wa-color-blue-gte-70),
+    var(--wa-color-blue-70)
+  );
+
+  --wa-color-indigo-max-50: color-mix(
+    in oklab,
+    var(--wa-color-indigo) var(--wa-color-indigo-lt-50),
+    var(--wa-color-indigo-50)
+  );
+  --wa-color-indigo-min-50: color-mix(
+    in oklab,
+    var(--wa-color-indigo) var(--wa-color-indigo-gte-50),
+    var(--wa-color-indigo-50)
+  );
+  --wa-color-indigo-max-60: color-mix(
+    in oklab,
+    var(--wa-color-indigo) var(--wa-color-indigo-lt-60),
+    var(--wa-color-indigo-60)
+  );
+  --wa-color-indigo-min-60: color-mix(
+    in oklab,
+    var(--wa-color-indigo) var(--wa-color-indigo-gte-60),
+    var(--wa-color-indigo-60)
+  );
+  --wa-color-indigo-max-70: color-mix(
+    in oklab,
+    var(--wa-color-indigo) var(--wa-color-indigo-lt-70),
+    var(--wa-color-indigo-70)
+  );
+  --wa-color-indigo-min-70: color-mix(
+    in oklab,
+    var(--wa-color-indigo) var(--wa-color-indigo-gte-70),
+    var(--wa-color-indigo-70)
+  );
+
+  --wa-color-purple-max-50: color-mix(
+    in oklab,
+    var(--wa-color-purple) var(--wa-color-purple-lt-50),
+    var(--wa-color-purple-50)
+  );
+  --wa-color-purple-min-50: color-mix(
+    in oklab,
+    var(--wa-color-purple) var(--wa-color-purple-gte-50),
+    var(--wa-color-purple-50)
+  );
+  --wa-color-purple-max-60: color-mix(
+    in oklab,
+    var(--wa-color-purple) var(--wa-color-purple-lt-60),
+    var(--wa-color-purple-60)
+  );
+  --wa-color-purple-min-60: color-mix(
+    in oklab,
+    var(--wa-color-purple) var(--wa-color-purple-gte-60),
+    var(--wa-color-purple-60)
+  );
+  --wa-color-purple-max-70: color-mix(
+    in oklab,
+    var(--wa-color-purple) var(--wa-color-purple-lt-70),
+    var(--wa-color-purple-70)
+  );
+  --wa-color-purple-min-70: color-mix(
+    in oklab,
+    var(--wa-color-purple) var(--wa-color-purple-gte-70),
+    var(--wa-color-purple-70)
+  );
+
+  --wa-color-pink-max-50: color-mix(in oklab, var(--wa-color-pink) var(--wa-color-pink-lt-50), var(--wa-color-pink-50));
+  --wa-color-pink-min-50: color-mix(
+    in oklab,
+    var(--wa-color-pink) var(--wa-color-pink-gte-50),
+    var(--wa-color-pink-50)
+  );
+  --wa-color-pink-max-60: color-mix(in oklab, var(--wa-color-pink) var(--wa-color-pink-lt-60), var(--wa-color-pink-60));
+  --wa-color-pink-min-60: color-mix(
+    in oklab,
+    var(--wa-color-pink) var(--wa-color-pink-gte-60),
+    var(--wa-color-pink-60)
+  );
+  --wa-color-pink-max-70: color-mix(in oklab, var(--wa-color-pink) var(--wa-color-pink-lt-70), var(--wa-color-pink-70));
+  --wa-color-pink-min-70: color-mix(
+    in oklab,
+    var(--wa-color-pink) var(--wa-color-pink-gte-70),
+    var(--wa-color-pink-70)
+  );
+
+  --wa-color-gray-max-50: color-mix(in oklab, var(--wa-color-gray) var(--wa-color-gray-lt-50), var(--wa-color-gray-50));
+  --wa-color-gray-min-50: color-mix(
+    in oklab,
+    var(--wa-color-gray) var(--wa-color-gray-gte-50),
+    var(--wa-color-gray-50)
+  );
+  --wa-color-gray-max-60: color-mix(in oklab, var(--wa-color-gray) var(--wa-color-gray-lt-60), var(--wa-color-gray-60));
+  --wa-color-gray-min-60: color-mix(
+    in oklab,
+    var(--wa-color-gray) var(--wa-color-gray-gte-60),
+    var(--wa-color-gray-60)
+  );
+  --wa-color-gray-max-70: color-mix(in oklab, var(--wa-color-gray) var(--wa-color-gray-lt-70), var(--wa-color-gray-70));
+  --wa-color-gray-min-70: color-mix(
+    in oklab,
+    var(--wa-color-gray) var(--wa-color-gray-gte-70),
+    var(--wa-color-gray-70)
+  );
+
+  /* Text color: white if key < 60, {hue}-10 otherwise */
+
+  --wa-color-red-on: color-mix(in oklab, var(--wa-color-red-10) var(--wa-color-red-gte-60), white);
+  --wa-color-orange-on: color-mix(in oklab, var(--wa-color-orange-10) var(--wa-color-orange-gte-60), white);
+  --wa-color-yellow-on: color-mix(in oklab, var(--wa-color-yellow-10) var(--wa-color-yellow-gte-60), white);
+  --wa-color-green-on: color-mix(in oklab, var(--wa-color-green-10) var(--wa-color-green-gte-60), white);
+  --wa-color-cyan-on: color-mix(in oklab, var(--wa-color-cyan-10) var(--wa-color-cyan-gte-60), white);
+  --wa-color-blue-on: color-mix(in oklab, var(--wa-color-blue-10) var(--wa-color-blue-gte-60), white);
+  --wa-color-indigo-on: color-mix(in oklab, var(--wa-color-indigo-10) var(--wa-color-indigo-gte-60), white);
+  --wa-color-purple-on: color-mix(in oklab, var(--wa-color-purple-10) var(--wa-color-purple-gte-60), white);
+  --wa-color-pink-on: color-mix(in oklab, var(--wa-color-pink-10) var(--wa-color-pink-gte-60), white);
+  --wa-color-gray-on: color-mix(in oklab, var(--wa-color-gray-10) var(--wa-color-gray-gte-60), white);
+}
+
+
+
+:where(:root),
+:host,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+.wa-palette-default {
+  --wa-color-red-95: #fff0ef /* oklch(96.667% 0.01632 22.08) */;
+  --wa-color-red-90: #ffdedc /* oklch(92.735% 0.03679 21.966) */;
+  --wa-color-red-80: #ffb8b6 /* oklch(84.803% 0.08289 20.771) */;
+  --wa-color-red-70: #fd8f90 /* oklch(76.801% 0.13322 20.052) */;
+  --wa-color-red-60: #f3676c /* oklch(68.914% 0.17256 20.646) */;
+  --wa-color-red-50: #dc3146 /* oklch(58.857% 0.20512 20.223) */;
+  --wa-color-red-40: #b30532 /* oklch(48.737% 0.19311 18.413) */;
+  --wa-color-red-30: #8a132c /* oklch(41.17% 0.1512 16.771) */;
+  --wa-color-red-20: #631323 /* oklch(33.297% 0.11208 14.847) */;
+  --wa-color-red-10: #3e0913 /* oklch(24.329% 0.08074 15.207) */;
+  --wa-color-red-05: #2a040b /* oklch(19.016% 0.06394 13.71) */;
+  --wa-color-red: var(--wa-color-red-50);
+  --wa-color-red-key: 50;
+
+  --wa-color-orange-95: #fff0e6 /* oklch(96.426% 0.02105 56.133) */;
+  --wa-color-orange-90: #ffdfca /* oklch(92.468% 0.04529 55.325) */;
+  --wa-color-orange-80: #ffbb94 /* oklch(84.588% 0.09454 50.876) */;
+  --wa-color-orange-70: #ff9266 /* oklch(76.744% 0.14429 42.309) */;
+  --wa-color-orange-60: #f46a45 /* oklch(68.848% 0.17805 35.951) */;
+  --wa-color-orange-50: #cd491c /* oklch(58.195% 0.17597 37.577) */;
+  --wa-color-orange-40: #9f3501 /* oklch(47.889% 0.14981 39.957) */;
+  --wa-color-orange-30: #802700 /* oklch(40.637% 0.1298 39.149) */;
+  --wa-color-orange-20: #601b00 /* oklch(33.123% 0.10587 39.117) */;
+  --wa-color-orange-10: #3c0d00 /* oklch(24.043% 0.07768 38.607) */;
+  --wa-color-orange-05: #280600 /* oklch(18.644% 0.0607 38.252) */;
+  --wa-color-orange: var(--wa-color-orange-60);
+  --wa-color-orange-key: 60;
+
+  --wa-color-yellow-95: #fef3cd /* oklch(96.322% 0.05069 93.748) */;
+  --wa-color-yellow-90: #ffe495 /* oklch(92.377% 0.10246 91.296) */;
+  --wa-color-yellow-80: #fac22b /* oklch(84.185% 0.16263 85.991) */;
+  --wa-color-yellow-70: #ef9d00 /* oklch(75.949% 0.16251 72.13) */;
+  --wa-color-yellow-60: #da7e00 /* oklch(67.883% 0.15587 62.246) */;
+  --wa-color-yellow-50: #b45f04 /* oklch(57.449% 0.13836 56.585) */;
+  --wa-color-yellow-40: #8c4602 /* oklch(47.319% 0.11666 54.663) */;
+  --wa-color-yellow-30: #6f3601 /* oklch(40.012% 0.09892 54.555) */;
+  --wa-color-yellow-20: #532600 /* oklch(32.518% 0.08157 53.927) */;
+  --wa-color-yellow-10: #331600 /* oklch(23.846% 0.05834 56.02) */;
+  --wa-color-yellow-05: #220c00 /* oklch(18.585% 0.04625 54.588) */;
+  --wa-color-yellow: var(--wa-color-yellow-80);
+  --wa-color-yellow-key: 80;
+
+  --wa-color-green-95: #e3f9e3 /* oklch(96.006% 0.03715 145.28) */;
+  --wa-color-green-90: #c2f2c1 /* oklch(91.494% 0.08233 144.35) */;
+  --wa-color-green-80: #93da98 /* oklch(82.445% 0.11601 146.11) */;
+  --wa-color-green-70: #5dc36f /* oklch(73.554% 0.15308 147.59) */;
+  --wa-color-green-60: #00ac49 /* oklch(64.982% 0.18414 148.83) */;
+  --wa-color-green-50: #00883c /* oklch(54.765% 0.15165 149.77) */;
+  --wa-color-green-40: #036730 /* oklch(45.004% 0.11963 151.06) */;
+  --wa-color-green-30: #0a5027 /* oklch(37.988% 0.09487 151.62) */;
+  --wa-color-green-20: #0a3a1d /* oklch(30.876% 0.07202 152.23) */;
+  --wa-color-green-10: #052310 /* oklch(22.767% 0.05128 152.45) */;
+  --wa-color-green-05: #031608 /* oklch(17.84% 0.03957 151.36) */;
+  --wa-color-green: var(--wa-color-green-60);
+  --wa-color-green-key: 60;
+
+  --wa-color-cyan-95: #e3f6fb /* oklch(96.063% 0.02111 215.26) */;
+  --wa-color-cyan-90: #c5ecf7 /* oklch(91.881% 0.04314 216.7) */;
+  --wa-color-cyan-80: #7fd6ec /* oklch(82.906% 0.08934 215.86) */;
+  --wa-color-cyan-70: #2fbedc /* oklch(74.18% 0.12169 215.86) */;
+  --wa-color-cyan-60: #00a3c0 /* oklch(65.939% 0.11738 216.42) */;
+  --wa-color-cyan-50: #078098 /* oklch(55.379% 0.09774 217.32) */;
+  --wa-color-cyan-40: #026274 /* oklch(45.735% 0.08074 216.18) */;
+  --wa-color-cyan-30: #014c5b /* oklch(38.419% 0.06817 216.88) */;
+  --wa-color-cyan-20: #003844 /* oklch(31.427% 0.05624 217.32) */;
+  --wa-color-cyan-10: #002129 /* oklch(22.851% 0.04085 217.17) */;
+  --wa-color-cyan-05: #00151b /* oklch(18.055% 0.03231 217.31) */;
+  --wa-color-cyan: var(--wa-color-cyan-70);
+  --wa-color-cyan-key: 70;
+
+  --wa-color-blue-95: #e8f3ff /* oklch(95.944% 0.01996 250.38) */;
+  --wa-color-blue-90: #d1e8ff /* oklch(92.121% 0.03985 248.26) */;
+  --wa-color-blue-80: #9fceff /* oklch(83.572% 0.08502 249.92) */;
+  --wa-color-blue-70: #6eb3ff /* oklch(75.256% 0.1308 252.03) */;
+  --wa-color-blue-60: #3e96ff /* oklch(67.196% 0.17661 254.97) */;
+  --wa-color-blue-50: #0071ec /* oklch(56.972% 0.20461 257.29) */;
+  --wa-color-blue-40: #0053c0 /* oklch(47.175% 0.1846 259.19) */;
+  --wa-color-blue-30: #003f9c /* oklch(39.805% 0.16217 259.98) */;
+  --wa-color-blue-20: #002d77 /* oklch(32.436% 0.1349 260.35) */;
+  --wa-color-blue-10: #001a4e /* oklch(23.965% 0.10161 260.68) */;
+  --wa-color-blue-05: #000f35 /* oklch(18.565% 0.07904 260.75) */;
+  --wa-color-blue: var(--wa-color-blue-50);
+  --wa-color-blue-key: 50;
+
+  --wa-color-indigo-95: #f0f2ff /* oklch(96.341% 0.0175 279.06) */;
+  --wa-color-indigo-90: #dfe5ff /* oklch(92.527% 0.0359 275.35) */;
+  --wa-color-indigo-80: #bcc7ff /* oklch(84.053% 0.07938 275.91) */;
+  --wa-color-indigo-70: #9da9ff /* oklch(75.941% 0.12411 276.95) */;
+  --wa-color-indigo-60: #808aff /* oklch(67.977% 0.17065 277.16) */;
+  --wa-color-indigo-50: #6163f2 /* oklch(57.967% 0.20943 277.04) */;
+  --wa-color-indigo-40: #4945cb /* oklch(48.145% 0.20042 277.08) */;
+  --wa-color-indigo-30: #3933a7 /* oklch(40.844% 0.17864 277.26) */;
+  --wa-color-indigo-20: #292381 /* oklch(33.362% 0.15096 277.21) */;
+  --wa-color-indigo-10: #181255 /* oklch(24.534% 0.11483 277.73) */;
+  --wa-color-indigo-05: #0d0a3a /* oklch(19.092% 0.08825 276.76) */;
+  --wa-color-indigo: var(--wa-color-indigo-50);
+  --wa-color-indigo-key: 50;
+
+  --wa-color-purple-95: #f7f0ff /* oklch(96.49% 0.02119 306.84) */;
+  --wa-color-purple-90: #eedfff /* oklch(92.531% 0.04569 306.6) */;
+  --wa-color-purple-80: #ddbdff /* oklch(84.781% 0.09615 306.52) */;
+  --wa-color-purple-70: #ca99ff /* oklch(76.728% 0.14961 305.27) */;
+  --wa-color-purple-60: #b678f5 /* oklch(68.906% 0.1844 304.96) */;
+  --wa-color-purple-50: #9951db /* oklch(58.603% 0.20465 304.87) */;
+  --wa-color-purple-40: #7936b3 /* oklch(48.641% 0.18949 304.79) */;
+  --wa-color-purple-30: #612692 /* oklch(41.23% 0.16836 304.92) */;
+  --wa-color-purple-20: #491870 /* oklch(33.663% 0.14258 305.12) */;
+  --wa-color-purple-10: #2d0b48 /* oklch(24.637% 0.10612 304.95) */;
+  --wa-color-purple-05: #1e0532 /* oklch(19.393% 0.08461 305.26) */;
+  --wa-color-purple: var(--wa-color-purple-50);
+  --wa-color-purple-key: 50;
+
+  --wa-color-pink-95: #feeff9 /* oklch(96.676% 0.02074 337.69) */;
+  --wa-color-pink-90: #feddf0 /* oklch(93.026% 0.04388 342.45) */;
+  --wa-color-pink-80: #fcb5d8 /* oklch(84.928% 0.09304 348.21) */;
+  --wa-color-pink-70: #f78dbf /* oklch(77.058% 0.14016 351.19) */;
+  --wa-color-pink-60: #e66ba3 /* oklch(69.067% 0.16347 353.69) */;
+  --wa-color-pink-50: #c84382 /* oklch(58.707% 0.17826 354.82) */;
+  --wa-color-pink-40: #9e2a6c /* oklch(48.603% 0.16439 350.08) */;
+  --wa-color-pink-30: #7d1e58 /* oklch(41.017% 0.14211 347.77) */;
+  --wa-color-pink-20: #5e1342 /* oklch(33.442% 0.11808 347.01) */;
+  --wa-color-pink-10: #3c0828 /* oklch(24.601% 0.08768 347.8) */;
+  --wa-color-pink-05: #28041a /* oklch(19.199% 0.06799 346.97) */;
+  --wa-color-pink: var(--wa-color-pink-50);
+  --wa-color-pink-key: 50;
+
+  --wa-color-gray-95: #f1f2f3 /* oklch(96.067% 0.00172 247.84) */;
+  --wa-color-gray-90: #e4e5e9 /* oklch(92.228% 0.0055 274.96) */;
+  --wa-color-gray-80: #c7c9d0 /* oklch(83.641% 0.00994 273.33) */;
+  --wa-color-gray-70: #abaeb9 /* oklch(75.183% 0.01604 273.78) */;
+  --wa-color-gray-60: #9194a2 /* oklch(66.863% 0.02088 276.18) */;
+  --wa-color-gray-50: #717584 /* oklch(56.418% 0.02359 273.77) */;
+  --wa-color-gray-40: #545868 /* oklch(46.281% 0.02644 274.26) */;
+  --wa-color-gray-30: #424554 /* oklch(39.355% 0.02564 276.27) */;
+  --wa-color-gray-20: #2f323f /* oklch(31.97% 0.02354 274.82) */;
+  --wa-color-gray-10: #1b1d26 /* oklch(23.277% 0.01762 275.14) */;
+  --wa-color-gray-05: #101219 /* oklch(18.342% 0.01472 272.42) */;
+  --wa-color-gray: var(--wa-color-gray-40);
+  --wa-color-gray-key: 40;
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/color.css */
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/brand/blue.css */
+:where(:root),
+:host,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+:where([class^='wa-palette-'], [class*=' wa-palette-']),
+.wa-brand-blue {
+  --wa-color-brand-95: var(--wa-color-blue-95);
+  --wa-color-brand-90: var(--wa-color-blue-90);
+  --wa-color-brand-80: var(--wa-color-blue-80);
+  --wa-color-brand-70: var(--wa-color-blue-70);
+  --wa-color-brand-60: var(--wa-color-blue-60);
+  --wa-color-brand-50: var(--wa-color-blue-50);
+  --wa-color-brand-40: var(--wa-color-blue-40);
+  --wa-color-brand-30: var(--wa-color-blue-30);
+  --wa-color-brand-20: var(--wa-color-blue-20);
+  --wa-color-brand-10: var(--wa-color-blue-10);
+  --wa-color-brand-05: var(--wa-color-blue-05);
+  --wa-color-brand: var(--wa-color-blue);
+
+  --wa-color-brand-lt-50: var(--wa-color-blue-lt-50);
+  --wa-color-brand-gte-50: var(--wa-color-blue-gte-50);
+
+  --wa-color-brand-lt-60: var(--wa-color-blue-lt-60);
+  --wa-color-brand-gte-60: var(--wa-color-blue-gte-60);
+
+  --wa-color-brand-lt-70: var(--wa-color-blue-lt-70);
+  --wa-color-brand-gte-70: var(--wa-color-blue-gte-70);
+
+  --wa-color-brand-max-50: var(--wa-color-blue-max-50);
+  --wa-color-brand-min-50: var(--wa-color-blue-min-50);
+  --wa-color-brand-max-60: var(--wa-color-blue-max-60);
+  --wa-color-brand-min-60: var(--wa-color-blue-min-60);
+  --wa-color-brand-max-70: var(--wa-color-blue-max-70);
+  --wa-color-brand-min-70: var(--wa-color-blue-min-70);
+
+  --wa-color-brand-on: var(--wa-color-blue-on);
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/success/green.css */
+:where(:root),
+:host,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+:where([class^='wa-palette-'], [class*=' wa-palette-']),
+.wa-success-green {
+  --wa-color-success-95: var(--wa-color-green-95);
+  --wa-color-success-90: var(--wa-color-green-90);
+  --wa-color-success-80: var(--wa-color-green-80);
+  --wa-color-success-70: var(--wa-color-green-70);
+  --wa-color-success-60: var(--wa-color-green-60);
+  --wa-color-success-50: var(--wa-color-green-50);
+  --wa-color-success-40: var(--wa-color-green-40);
+  --wa-color-success-30: var(--wa-color-green-30);
+  --wa-color-success-20: var(--wa-color-green-20);
+  --wa-color-success-10: var(--wa-color-green-10);
+  --wa-color-success-05: var(--wa-color-green-05);
+  --wa-color-success: var(--wa-color-green);
+
+  --wa-color-success-lt-50: var(--wa-color-green-lt-50);
+  --wa-color-success-gte-50: var(--wa-color-green-gte-50);
+
+  --wa-color-success-lt-60: var(--wa-color-green-lt-60);
+  --wa-color-success-gte-60: var(--wa-color-green-gte-60);
+
+  --wa-color-success-lt-70: var(--wa-color-green-lt-70);
+  --wa-color-success-gte-70: var(--wa-color-green-gte-70);
+
+  --wa-color-success-max-50: var(--wa-color-green-max-50);
+  --wa-color-success-min-50: var(--wa-color-green-min-50);
+  --wa-color-success-max-60: var(--wa-color-green-max-60);
+  --wa-color-success-min-60: var(--wa-color-green-min-60);
+  --wa-color-success-max-70: var(--wa-color-green-max-70);
+  --wa-color-success-min-70: var(--wa-color-green-min-70);
+
+  --wa-color-success-on: var(--wa-color-green-on);
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/warning/yellow.css */
+:where(:root),
+:host,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+:where([class^='wa-palette-'], [class*=' wa-palette-']),
+.wa-warning-yellow {
+  --wa-color-warning-95: var(--wa-color-yellow-95);
+  --wa-color-warning-90: var(--wa-color-yellow-90);
+  --wa-color-warning-80: var(--wa-color-yellow-80);
+  --wa-color-warning-70: var(--wa-color-yellow-70);
+  --wa-color-warning-60: var(--wa-color-yellow-60);
+  --wa-color-warning-50: var(--wa-color-yellow-50);
+  --wa-color-warning-40: var(--wa-color-yellow-40);
+  --wa-color-warning-30: var(--wa-color-yellow-30);
+  --wa-color-warning-20: var(--wa-color-yellow-20);
+  --wa-color-warning-10: var(--wa-color-yellow-10);
+  --wa-color-warning-05: var(--wa-color-yellow-05);
+  --wa-color-warning: var(--wa-color-yellow);
+
+  --wa-color-warning-lt-50: var(--wa-color-yellow-lt-50);
+  --wa-color-warning-gte-50: var(--wa-color-yellow-gte-50);
+
+  --wa-color-warning-lt-60: var(--wa-color-yellow-lt-60);
+  --wa-color-warning-gte-60: var(--wa-color-yellow-gte-60);
+
+  --wa-color-warning-lt-70: var(--wa-color-yellow-lt-70);
+  --wa-color-warning-gte-70: var(--wa-color-yellow-gte-70);
+
+  --wa-color-warning-max-50: var(--wa-color-yellow-max-50);
+  --wa-color-warning-min-50: var(--wa-color-yellow-min-50);
+  --wa-color-warning-max-60: var(--wa-color-yellow-max-60);
+  --wa-color-warning-min-60: var(--wa-color-yellow-min-60);
+  --wa-color-warning-max-70: var(--wa-color-yellow-max-70);
+  --wa-color-warning-min-70: var(--wa-color-yellow-min-70);
+
+  --wa-color-warning-on: var(--wa-color-yellow-on);
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/danger/red.css */
+:where(:root),
+:host,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+:where([class^='wa-palette-'], [class*=' wa-palette-']),
+.wa-danger-red {
+  --wa-color-danger-95: var(--wa-color-red-95);
+  --wa-color-danger-90: var(--wa-color-red-90);
+  --wa-color-danger-80: var(--wa-color-red-80);
+  --wa-color-danger-70: var(--wa-color-red-70);
+  --wa-color-danger-60: var(--wa-color-red-60);
+  --wa-color-danger-50: var(--wa-color-red-50);
+  --wa-color-danger-40: var(--wa-color-red-40);
+  --wa-color-danger-30: var(--wa-color-red-30);
+  --wa-color-danger-20: var(--wa-color-red-20);
+  --wa-color-danger-10: var(--wa-color-red-10);
+  --wa-color-danger-05: var(--wa-color-red-05);
+  --wa-color-danger: var(--wa-color-red);
+
+  --wa-color-danger-lt-50: var(--wa-color-red-lt-50);
+  --wa-color-danger-gte-50: var(--wa-color-red-gte-50);
+
+  --wa-color-danger-lt-60: var(--wa-color-red-lt-60);
+  --wa-color-danger-gte-60: var(--wa-color-red-gte-60);
+
+  --wa-color-danger-lt-70: var(--wa-color-red-lt-70);
+  --wa-color-danger-gte-70: var(--wa-color-red-gte-70);
+
+  --wa-color-danger-max-50: var(--wa-color-red-max-50);
+  --wa-color-danger-min-50: var(--wa-color-red-min-50);
+  --wa-color-danger-max-60: var(--wa-color-red-max-60);
+  --wa-color-danger-min-60: var(--wa-color-red-min-60);
+  --wa-color-danger-max-70: var(--wa-color-red-max-70);
+  --wa-color-danger-min-70: var(--wa-color-red-min-70);
+
+  --wa-color-danger-on: var(--wa-color-red-on);
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/neutral/gray.css */
+:where(:root),
+:host,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+:where([class^='wa-palette-'], [class*=' wa-palette-']),
+.wa-neutral-gray {
+  --wa-color-neutral-95: var(--wa-color-gray-95);
+  --wa-color-neutral-90: var(--wa-color-gray-90);
+  --wa-color-neutral-80: var(--wa-color-gray-80);
+  --wa-color-neutral-70: var(--wa-color-gray-70);
+  --wa-color-neutral-60: var(--wa-color-gray-60);
+  --wa-color-neutral-50: var(--wa-color-gray-50);
+  --wa-color-neutral-40: var(--wa-color-gray-40);
+  --wa-color-neutral-30: var(--wa-color-gray-30);
+  --wa-color-neutral-20: var(--wa-color-gray-20);
+  --wa-color-neutral-10: var(--wa-color-gray-10);
+  --wa-color-neutral-05: var(--wa-color-gray-05);
+  --wa-color-neutral: var(--wa-color-gray);
+
+  --wa-color-neutral-lt-50: var(--wa-color-gray-lt-50);
+  --wa-color-neutral-gte-50: var(--wa-color-gray-gte-50);
+
+  --wa-color-neutral-lt-60: var(--wa-color-gray-lt-60);
+  --wa-color-neutral-gte-60: var(--wa-color-gray-gte-60);
+
+  --wa-color-neutral-lt-70: var(--wa-color-gray-lt-70);
+  --wa-color-neutral-gte-70: var(--wa-color-gray-gte-70);
+
+  --wa-color-neutral-max-50: var(--wa-color-gray-max-50);
+  --wa-color-neutral-min-50: var(--wa-color-gray-min-50);
+  --wa-color-neutral-max-60: var(--wa-color-gray-max-60);
+  --wa-color-neutral-min-60: var(--wa-color-gray-min-60);
+  --wa-color-neutral-max-70: var(--wa-color-gray-max-70);
+  --wa-color-neutral-min-70: var(--wa-color-gray-min-70);
+
+  --wa-color-neutral-on: var(--wa-color-gray-on);
+}
+
+
+
+/**
+ * Foundational Colors and Semantic Colors
+ */
+:where(:root),
+:host,
+.wa-theme-default,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+.wa-light,
+.wa-dark .wa-invert {
+  color-scheme: light;
+  color: var(--wa-color-text-normal);
+
+  /**
+   * Foundational Colors
+   */
+
+  /* Surfaces are background layers that other content rests on.
+   * Surface colors help convey hierarchy through elevation, where raised is closest to the user and lowered is farthest away. */
+  --wa-color-surface-raised: white;
+  --wa-color-surface-default: white;
+  --wa-color-surface-lowered: var(--wa-color-neutral-95);
+  --wa-color-surface-border: var(--wa-color-neutral-90);
+
+  /* Text colors are used for standard text elements.
+   * Recommended: minimum 4.5:1 contrast ratio between text colors and surface colors. */
+  --wa-color-text-normal: var(--wa-color-neutral-10);
+  --wa-color-text-quiet: var(--wa-color-neutral-40);
+  --wa-color-text-link: var(--wa-color-brand-40);
+
+  /* Overlays provide a backdrop for isolated content, often allowing background context to show through. */
+  --wa-color-overlay-modal: color-mix(in oklab, var(--wa-color-neutral-05) 50%, transparent);
+  --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-80) 20%, transparent);
+
+  /* Shadows indicate elevation. Shadow color is used in your theme's shadow properties.
+   * By default, the opacity of your shadow color is tied to the blur of shadows in your theme.
+   * Because solid shadows appear stronger in color than diffused shadows, this helps keep consistent color intensity. */
+  --wa-color-shadow: color-mix(
+    in oklab,
+    var(--wa-color-neutral-05) calc(var(--wa-shadow-blur-scale) * 4% + 8%),
+    transparent
+  );
+
+  /* Focus color provides the default color of the focus ring for predictable keyboard navigation.
+   * Recommended: minimum 3:1 contrast ratio against surfaces and background colors. */
+  --wa-color-focus: var(--wa-color-brand-60);
+
+  /* Hover and active colors are intended to be used in color-mix() to achieve consistent effects across components. */
+  --wa-color-mix-hover: black 10%;
+  --wa-color-mix-active: black 20%;
+
+  /**
+   * Semantic Colors
+   * Five semantic groups - brand, success, neutral, warning, and danger - reinforce a component's message, intended usage, or expected results.
+   * Within these groups, each color specifies a role -
+   *  *  Fill for background colors or areas larger than a few pixels
+   *  *  Border for borders, dividers, and other stroke-like elements
+   *  *  On for content displayed on a fill with the corresponding attention
+   * Each role has three options for attention - quiet, normal, and loud - where quiet draws the least attention and loud draws the most.
+   */
+  --wa-color-brand-fill-quiet: var(--wa-color-brand-95);
+  --wa-color-brand-fill-normal: var(--wa-color-brand-90);
+  --wa-color-brand-fill-loud: var(--wa-color-brand-max-50);
+  --wa-color-brand-border-quiet: var(--wa-color-brand-90);
+  --wa-color-brand-border-normal: var(--wa-color-brand-80);
+  --wa-color-brand-border-loud: var(--wa-color-brand-60);
+  --wa-color-brand-on-quiet: var(--wa-color-brand-40);
+  --wa-color-brand-on-normal: var(--wa-color-brand-30);
+  --wa-color-brand-on-loud: white;
+
+  --wa-color-success-fill-quiet: var(--wa-color-success-95);
+  --wa-color-success-fill-normal: var(--wa-color-success-90);
+  --wa-color-success-fill-loud: var(--wa-color-success-max-50);
+  --wa-color-success-border-quiet: var(--wa-color-success-90);
+  --wa-color-success-border-normal: var(--wa-color-success-80);
+  --wa-color-success-border-loud: var(--wa-color-success-60);
+  --wa-color-success-on-quiet: var(--wa-color-success-40);
+  --wa-color-success-on-normal: var(--wa-color-success-30);
+  --wa-color-success-on-loud: white;
+
+  --wa-color-warning-fill-quiet: var(--wa-color-warning-95);
+  --wa-color-warning-fill-normal: var(--wa-color-warning-90);
+  --wa-color-warning-fill-loud: var(--wa-color-warning-max-50);
+  --wa-color-warning-border-quiet: var(--wa-color-warning-90);
+  --wa-color-warning-border-normal: var(--wa-color-warning-80);
+  --wa-color-warning-border-loud: var(--wa-color-warning-60);
+  --wa-color-warning-on-quiet: var(--wa-color-warning-40);
+  --wa-color-warning-on-normal: var(--wa-color-warning-30);
+  --wa-color-warning-on-loud: white;
+
+  --wa-color-danger-fill-quiet: var(--wa-color-danger-95);
+  --wa-color-danger-fill-normal: var(--wa-color-danger-90);
+  --wa-color-danger-fill-loud: var(--wa-color-danger-max-50);
+  --wa-color-danger-border-quiet: var(--wa-color-danger-90);
+  --wa-color-danger-border-normal: var(--wa-color-danger-80);
+  --wa-color-danger-border-loud: var(--wa-color-danger-60);
+  --wa-color-danger-on-quiet: var(--wa-color-danger-40);
+  --wa-color-danger-on-normal: var(--wa-color-danger-30);
+  --wa-color-danger-on-loud: white;
+
+  --wa-color-neutral-fill-quiet: var(--wa-color-neutral-95);
+  --wa-color-neutral-fill-normal: var(--wa-color-neutral-90);
+  --wa-color-neutral-fill-loud: var(--wa-color-neutral-20);
+  --wa-color-neutral-border-quiet: var(--wa-color-neutral-90);
+  --wa-color-neutral-border-normal: var(--wa-color-neutral-80);
+  --wa-color-neutral-border-loud: var(--wa-color-neutral-60);
+  --wa-color-neutral-on-quiet: var(--wa-color-neutral-40);
+  --wa-color-neutral-on-normal: var(--wa-color-neutral-30);
+  --wa-color-neutral-on-loud: white;
+}
+
+.wa-dark,
+.wa-invert {
+  color-scheme: dark;
+  color: var(--wa-color-text-normal);
+
+  /**
+   * Foundational Colors
+   */
+  --wa-color-surface-raised: var(--wa-color-neutral-10);
+  --wa-color-surface-default: var(--wa-color-neutral-05);
+  --wa-color-surface-lowered: color-mix(in oklab, var(--wa-color-surface-default), black 20%);
+  --wa-color-surface-border: var(--wa-color-neutral-20);
+
+  --wa-color-text-normal: var(--wa-color-neutral-95);
+  --wa-color-text-quiet: var(--wa-color-neutral-60);
+  --wa-color-text-link: var(--wa-color-brand-70);
+
+  --wa-color-overlay-modal: color-mix(in oklab, black 60%, transparent);
+  --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-50) 10%, transparent);
+
+  /* Mixing with --wa-color-surface-lowered prevents shadows from becoming excessively dark relative to --wa-color-surface-default. */
+  --wa-color-shadow: color-mix(
+    in oklab,
+    var(--wa-color-surface-lowered) calc(var(--wa-shadow-blur-scale) * 32% + 40%),
+    transparent
+  );
+
+  --wa-color-focus: var(--wa-color-brand-60);
+
+  --wa-color-mix-hover: black 8%;
+  --wa-color-mix-active: black 16%;
+
+  /**
+   * Semantic Colors
+   */
+  --wa-color-brand-fill-quiet: var(--wa-color-brand-10);
+  --wa-color-brand-fill-normal: var(--wa-color-brand-20);
+  --wa-color-brand-fill-loud: var(--wa-color-brand-50);
+  --wa-color-brand-border-quiet: var(--wa-color-brand-20);
+  --wa-color-brand-border-normal: var(--wa-color-brand-30);
+  --wa-color-brand-border-loud: var(--wa-color-brand-40);
+  --wa-color-brand-on-quiet: var(--wa-color-brand-min-60);
+  --wa-color-brand-on-normal: var(--wa-color-brand-70);
+  --wa-color-brand-on-loud: white;
+
+  --wa-color-success-fill-quiet: var(--wa-color-success-10);
+  --wa-color-success-fill-normal: var(--wa-color-success-20);
+  --wa-color-success-fill-loud: var(--wa-color-success-50);
+  --wa-color-success-border-quiet: var(--wa-color-success-20);
+  --wa-color-success-border-normal: var(--wa-color-success-30);
+  --wa-color-success-border-loud: var(--wa-color-success-40);
+  --wa-color-success-on-quiet: var(--wa-color-success-min-60);
+  --wa-color-success-on-normal: var(--wa-color-success-70);
+  --wa-color-success-on-loud: white;
+
+  --wa-color-warning-fill-quiet: var(--wa-color-warning-10);
+  --wa-color-warning-fill-normal: var(--wa-color-warning-20);
+  --wa-color-warning-fill-loud: var(--wa-color-warning-50);
+  --wa-color-warning-border-quiet: var(--wa-color-warning-20);
+  --wa-color-warning-border-normal: var(--wa-color-warning-30);
+  --wa-color-warning-border-loud: var(--wa-color-warning-40);
+  --wa-color-warning-on-quiet: var(--wa-color-warning-min-60);
+  --wa-color-warning-on-normal: var(--wa-color-warning-70);
+  --wa-color-warning-on-loud: white;
+
+  --wa-color-danger-fill-quiet: var(--wa-color-danger-10);
+  --wa-color-danger-fill-normal: var(--wa-color-danger-20);
+  --wa-color-danger-fill-loud: var(--wa-color-danger-50);
+  --wa-color-danger-border-quiet: var(--wa-color-danger-20);
+  --wa-color-danger-border-normal: var(--wa-color-danger-30);
+  --wa-color-danger-border-loud: var(--wa-color-danger-40);
+  --wa-color-danger-on-quiet: var(--wa-color-danger-min-60);
+  --wa-color-danger-on-normal: var(--wa-color-danger-70);
+  --wa-color-danger-on-loud: white;
+
+  --wa-color-neutral-fill-quiet: var(--wa-color-neutral-10);
+  --wa-color-neutral-fill-normal: var(--wa-color-neutral-20);
+  --wa-color-neutral-fill-loud: var(--wa-color-neutral-90);
+  --wa-color-neutral-border-quiet: var(--wa-color-neutral-20);
+  --wa-color-neutral-border-normal: var(--wa-color-neutral-30);
+  --wa-color-neutral-border-loud: var(--wa-color-neutral-40);
+  --wa-color-neutral-on-quiet: var(--wa-color-neutral-60);
+  --wa-color-neutral-on-normal: var(--wa-color-neutral-70);
+  --wa-color-neutral-on-loud: var(--wa-color-neutral-05);
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/space.css */
+/**
+ * Spacing
+ */
+:where(:root),
+:host {
+  /* A multiplier is provided to uniformly increase or decrease all spacing. */
+  --wa-space-scale: 1;
+  --wa-space-3xs: calc(var(--wa-space-scale) * 0.125rem); /* 2px */
+  --wa-space-2xs: calc(var(--wa-space-scale) * 0.25rem); /* 4px */
+  --wa-space-xs: calc(var(--wa-space-scale) * 0.5rem); /* 8px */
+  --wa-space-s: calc(var(--wa-space-scale) * 0.75rem); /* 12px */
+  --wa-space-m: calc(var(--wa-space-scale) * 1rem); /* 16px */
+  --wa-space-l: calc(var(--wa-space-scale) * 1.25rem); /* 20px */
+  --wa-space-xl: calc(var(--wa-space-scale) * 1.5rem); /* 24px */
+  --wa-space-2xl: calc(var(--wa-space-scale) * 2rem); /* 32px */
+  --wa-space-3xl: calc(var(--wa-space-scale) * 3rem); /* 48px */
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/outlines.css */
+/**
+  * Borders and outlines
+  */
+:where(:root),
+:host {
+  --wa-border-style: solid;
+
+  /* A multiplier is provided to uniformly increase or decrease all border widths. */
+  --wa-border-width-scale: 1;
+  --wa-border-width-s: calc(var(--wa-border-width-scale) * 0.0625rem);
+  --wa-border-width-m: calc(var(--wa-border-width-scale) * 0.125rem);
+  --wa-border-width-l: calc(var(--wa-border-width-scale) * 0.1875rem);
+
+  /**
+   * Focus
+   */
+  --wa-focus-ring-style: solid;
+  --wa-focus-ring-width: 0.1875rem; /* 3px */
+  --wa-focus-ring: var(--wa-focus-ring-style) var(--wa-focus-ring-width) var(--wa-color-focus);
+  --wa-focus-ring-offset: 0.0625rem; /* 1px */
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/typography.css */
+/**
+ * Typography
+ */
+:where(:root),
+:host {
+  --wa-font-family-body: ui-sans-serif, system-ui, sans-serif;
+  --wa-font-family-heading: var(--wa-font-family-body);
+  --wa-font-family-code: ui-monospace, monospace;
+  --wa-font-family-longform: ui-serif, serif;
+
+  /* The default type scale is roughly based on the Major Second scale (x1.125),
+   * with each value rounded to the nearest whole pixel based on a 16px root font size.
+   * For larger font sizes, every other step on the scale is skipped in order to maximize variation.
+   * A multiplier is provided to uniformly increase or decrease all font sizes. */
+  --wa-font-size-scale: 1;
+  --wa-font-size-2xs: calc(0.6875rem * var(--wa-font-size-scale)); /* 11px */
+  --wa-font-size-xs: calc(0.75rem * var(--wa-font-size-scale)); /* 12px */
+  --wa-font-size-s: calc(0.875rem * var(--wa-font-size-scale)); /* 14px */
+  --wa-font-size-m: calc(1rem * var(--wa-font-size-scale)); /* 16px */
+  --wa-font-size-l: calc(1.25rem * var(--wa-font-size-scale)); /* 20px */
+  --wa-font-size-xl: calc(1.625rem * var(--wa-font-size-scale)); /* 26px */
+  --wa-font-size-2xl: calc(2rem * var(--wa-font-size-scale)); /* 32px */
+  --wa-font-size-3xl: calc(2.5625rem * var(--wa-font-size-scale)); /* 41px */
+  --wa-font-size-4xl: calc(3.25rem * var(--wa-font-size-scale)); /* 52px */
+
+  --wa-font-weight-light: 300;
+  --wa-font-weight-normal: 400;
+  --wa-font-weight-semibold: 500;
+  --wa-font-weight-bold: 600;
+
+  --wa-font-weight-body: var(--wa-font-weight-normal);
+  --wa-font-weight-heading: var(--wa-font-weight-bold);
+  --wa-font-weight-action: var(--wa-font-weight-semibold);
+
+  --wa-line-height-condensed: 1.2;
+  --wa-line-height-normal: 1.6;
+  --wa-line-height-expanded: 2;
+
+  --wa-link-decoration-default: underline color-mix(in oklab, currentColor 70%, transparent) dotted;
+  --wa-link-decoration-hover: underline;
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/rounding.css */
+/**
+* Rounding
+*/
+:where(:root),
+:host {
+  /* A multiplier is provided to uniformly increase or decrease all border radii. */
+  --wa-border-radius-scale: 1;
+  --wa-border-radius-s: calc(var(--wa-border-radius-scale) * 0.1875rem);
+  --wa-border-radius-m: calc(var(--wa-border-radius-scale) * 0.375rem);
+  --wa-border-radius-l: calc(var(--wa-border-radius-scale) * 0.75rem);
+
+  /* These common border radius properties can create specific shapes beyond the theme's preferred corner styles. */
+  --wa-border-radius-pill: 9999px;
+  --wa-border-radius-circle: 50%;
+  --wa-border-radius-square: 0px;
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/shadows.css */
+/**
+ * Shadows
+ * Shadow properties are highly modular to make it easy to create custom shadow effects or transform elements based on specific shadow qualities.
+ * A multiplier is provided for each shadow quality to uniformly scale all related values.
+ */
+:where(:root),
+:host {
+  --wa-shadow-offset-x-scale: 0;
+  --wa-shadow-offset-x-s: calc(var(--wa-shadow-offset-x-scale) * 0.125rem);
+  --wa-shadow-offset-x-m: calc(var(--wa-shadow-offset-x-scale) * 0.25rem);
+  --wa-shadow-offset-x-l: calc(var(--wa-shadow-offset-x-scale) * 0.5rem);
+
+  --wa-shadow-offset-y-scale: 1;
+  --wa-shadow-offset-y-s: calc(var(--wa-shadow-offset-y-scale) * 0.125rem);
+  --wa-shadow-offset-y-m: calc(var(--wa-shadow-offset-y-scale) * 0.25rem);
+  --wa-shadow-offset-y-l: calc(var(--wa-shadow-offset-y-scale) * 0.5rem);
+
+  --wa-shadow-blur-scale: 1;
+  --wa-shadow-blur-s: calc(var(--wa-shadow-blur-scale) * 0.125rem);
+  --wa-shadow-blur-m: calc(var(--wa-shadow-blur-scale) * 0.25rem);
+  --wa-shadow-blur-l: calc(var(--wa-shadow-blur-scale) * 0.5rem);
+
+  --wa-shadow-spread-scale: -0.5;
+  --wa-shadow-spread-s: calc(var(--wa-shadow-spread-scale) * 0.125rem);
+  --wa-shadow-spread-m: calc(var(--wa-shadow-spread-scale) * 0.25rem);
+  --wa-shadow-spread-l: calc(var(--wa-shadow-spread-scale) * 0.5rem);
+
+  --wa-shadow-s: var(--wa-shadow-offset-x-s) var(--wa-shadow-offset-y-s) var(--wa-shadow-blur-s)
+    var(--wa-shadow-spread-s) var(--wa-color-shadow);
+  --wa-shadow-m: var(--wa-shadow-offset-x-m) var(--wa-shadow-offset-y-m) var(--wa-shadow-blur-m)
+    var(--wa-shadow-spread-m) var(--wa-color-shadow);
+  --wa-shadow-l: var(--wa-shadow-offset-x-l) var(--wa-shadow-offset-y-l) var(--wa-shadow-blur-l)
+    var(--wa-shadow-spread-l) var(--wa-color-shadow);
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/transitions.css */
+/**
+ * Transitions
+ */
+:where(:root),
+:host {
+  --wa-transition-easing: ease;
+  --wa-transition-slow: 300ms;
+  --wa-transition-normal: 150ms;
+  --wa-transition-fast: 75ms;
+}
+
+
+/* Inlined from https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/themes/default/groups.css */
+/**
+ * Component Groups
+ */
+:where(:root),
+:host,
+.wa-theme-default,
+:where([class^='wa-theme-'], [class*=' wa-theme-']),
+.wa-light,
+.wa-dark,
+.wa-invert {
+  /* Form controls */
+  --wa-form-control-background-color: var(--wa-color-surface-default);
+
+  --wa-form-control-border-color: var(--wa-color-neutral-border-loud);
+  --wa-form-control-border-style: var(--wa-border-style);
+  --wa-form-control-border-width: var(--wa-border-width-s);
+  --wa-form-control-border-radius: var(--wa-border-radius-m);
+
+  --wa-form-control-activated-color: var(--wa-color-brand-fill-loud);
+
+  --wa-form-control-label-color: var(--wa-color-text-normal);
+  --wa-form-control-label-font-weight: var(--wa-font-weight-semibold);
+  --wa-form-control-label-line-height: var(--wa-line-height-normal);
+
+  --wa-form-control-value-color: var(--wa-color-text-normal);
+  --wa-form-control-value-font-weight: var(--wa-font-weight-body);
+  --wa-form-control-value-line-height: var(--wa-line-height-condensed);
+
+  --wa-form-control-placeholder-color: var(--wa-color-gray-60);
+
+  --wa-form-control-required-content: '*';
+  --wa-form-control-required-content-color: inherit;
+  --wa-form-control-required-content-offset: -0.1em;
+
+  /* Panels */
+  --wa-panel-border-style: var(--wa-border-style);
+  --wa-panel-border-width: var(--wa-border-width-s);
+  --wa-panel-border-radius: var(--wa-border-radius-l);
+
+  /* Tooltips */
+  --wa-tooltip-arrow-size: 0.375rem;
+
+  --wa-tooltip-background-color: var(--wa-color-text-normal);
+
+  --wa-tooltip-border-radius: var(--wa-border-radius-s);
+
+  --wa-tooltip-content-color: var(--wa-color-surface-default);
+  --wa-tooltip-font-size: var(--wa-font-size-s);
+  --wa-tooltip-line-height: var(--wa-line-height-normal);
+}
